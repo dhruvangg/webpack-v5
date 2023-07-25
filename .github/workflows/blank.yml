@@ -39,7 +39,7 @@ jobs:
 
       # Copy the build output to a separate directory
       - name: Copy Build Artifacts
-        run: cp -R build build-artifacts
+        run: cp -R dist build-artifacts
 
       # Commit and push the build artifacts to the 'build' branch
       - name: Commit and Push Build Artifacts
