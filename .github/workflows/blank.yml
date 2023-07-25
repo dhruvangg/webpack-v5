@@ -36,18 +36,3 @@ jobs:
       # Runs build
       - name: Run build
         run: npm run build
-
-      # Copy the build output to a separate directory
-      - name: Copy Build Artifacts
-        run: cp -R dist build-artifacts
-
-      # Commit and push the build artifacts to the 'build' branch
-      - name: Commit and Push Build Artifacts
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git checkout -b build
-          git add build-artifacts
-          git commit -m "Add build artifacts"
-          git push origin build  
-             
